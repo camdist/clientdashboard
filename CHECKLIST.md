@@ -8,13 +8,13 @@
 - [ ] Valid credentials open the dashboard; incorrect credentials are refused.
 - [ ] A real client, project, task and payment record can be saved and survive reload.
 - [ ] Upload a test file in Resources, then download it and compare its contents.
-- [ ] Test all five themes; save your preference and reload.
+- [ ] Test all ten themes; save your preference and reload.
 - [ ] Link content/tasks/invoices to a project; check their summaries.
 - [ ] Desktop shortcut ZIPs point to your own URL.
 - [ ] Verify desktop installation in your actual browser if you want app-window access.
 - [ ] Record and file backups downloaded; stored credentials excluded from Git.
 
-This is a personal single-workspace deployment. Account-separated multi-buyer SaaS, automated social metrics, payment processing, payroll and inventory are outside this package.
+This is a personal single-workspace deployment. Account-separated multi-buyer SaaS, one-click social OAuth login and scheduled syncing, payment processing, payroll and inventory are outside this package.
 
 ## Version 3.2 feature checks
 
@@ -22,3 +22,13 @@ This is a personal single-workspace deployment. Account-separated multi-buyer Sa
 - Create an invoice with line items, discount and tax. Check its reference and total, then download/print it.
 - Edit the monthly Excel template, preview and import it. Repeat to confirm duplicate skipping.
 - Switch Month/Agenda and Bar/Line/Wave chart views.
+
+## Version 3.5 account and metrics checks
+
+- Register an account under a real client and enter its exact platform ID.
+- Follow its connection guide and set the matching Worker secret; never commit access tokens.
+- Link a Published item to that account and its exact post. Save, then sync.
+- Compare the resolved post ID and each available number with the native post report, using the same date window and metric definition.
+- Check an incorrect account and an expired key: syncing should show a clear error and keep prior values.
+- Confirm missing counters show Not available, and impressions are separate from views.
+- Test a custom platform: registration and links work; automatic syncing is clearly unavailable.
