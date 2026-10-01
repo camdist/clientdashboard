@@ -18,7 +18,7 @@
     {
       "binding": "DB",
       "database_name": "client-dashboard-db",
-      "database_id": "00000000-0000-4000-8000-000000000000",
+      "database_id": "75944dc9-89e8-43ed-95dd-653995d47a0d",
       "migrations_dir": "drizzle"
     }
   ],
