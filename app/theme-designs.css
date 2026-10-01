@@ -1,0 +1,17 @@
+/* Original SVG motifs stay behind opaque content surfaces. */
+:root{--theme-pattern:none}
+:root[data-theme] body{background-image:var(--theme-pattern);background-size:260px 200px}
+:root[data-theme] .navigation [data-slot=sidebar-inner]{background-image:var(--theme-pattern);background-size:260px 200px}
+.theme-preview[class*="preview-"]{background-image:var(--mini-pattern,none);background-size:130px 100px}
+.theme-preview[class*="preview-"] aside{background-image:var(--mini-pattern,none);background-size:130px 100px}
+.original-design{display:block;font-size:12px;margin-top:17px;color:var(--buyer-muted)}
+:root[data-theme="botanical"]{--buyer-bg:#f5f7ee;--buyer-surface:#ffffff;--buyer-text:#28383a;--buyer-muted:#626b70;--buyer-border:#d7e3d5;--buyer-side:#213f34;--buyer-side-text:#eee9e1;--buyer-side-active:#315b48;--buyer-radius:10px;--buyer-shadow:0 3px 14px #17223808;--theme-pattern:url("/themes/botanical.svg")}
+.preview-botanical{--mini-bg:#f5f7ee;--mini-surface:#ffffff;--mini-side:#213f34;--mini-accent:#3d7059;--mini-border:#d7e3d5;--mini-radius:5px;--mini-pattern:url("/themes/botanical.svg")}
+:root[data-theme="rose"]{--buyer-bg:#fcf5f3;--buyer-surface:#ffffff;--buyer-text:#28383a;--buyer-muted:#626b70;--buyer-border:#ead8dd;--buyer-side:#4c2639;--buyer-side-text:#eee9e1;--buyer-side-active:#69344b;--buyer-radius:10px;--buyer-shadow:0 3px 14px #17223808;--theme-pattern:url("/themes/rose.svg")}
+.preview-rose{--mini-bg:#fcf5f3;--mini-surface:#ffffff;--mini-side:#4c2639;--mini-accent:#95465f;--mini-border:#ead8dd;--mini-radius:5px;--mini-pattern:url("/themes/rose.svg")}
+:root[data-theme="coastal"]{--buyer-bg:#f1f7fa;--buyer-surface:#ffffff;--buyer-text:#28383a;--buyer-muted:#626b70;--buyer-border:#d5e5eb;--buyer-side:#173e54;--buyer-side-text:#eee9e1;--buyer-side-active:#255970;--buyer-radius:10px;--buyer-shadow:0 3px 14px #17223808;--theme-pattern:url("/themes/coastal.svg")}
+.preview-coastal{--mini-bg:#f1f7fa;--mini-surface:#ffffff;--mini-side:#173e54;--mini-accent:#226c88;--mini-border:#d5e5eb;--mini-radius:5px;--mini-pattern:url("/themes/coastal.svg")}
+:root[data-theme="midnight-bloom"][data-tone="dark"]{--buyer-bg:#161323;--buyer-surface:#211b31;--buyer-text:#f0e9fb;--buyer-muted:#bdb0cc;--buyer-border:#443650;--buyer-side:#211c31;--buyer-side-text:#eee9e1;--buyer-side-active:#392c4c;--buyer-radius:10px;--buyer-shadow:0 3px 14px #17223808;--theme-pattern:url("/themes/midnight-bloom.svg")}
+.preview-midnight-bloom{--mini-bg:#161323;--mini-surface:#211b31;--mini-side:#211c31;--mini-accent:#d0b8f1;--mini-border:#443650;--mini-radius:5px;--mini-pattern:url("/themes/midnight-bloom.svg")}
+:root[data-theme="golden-deco"]{--buyer-bg:#fbf7ed;--buyer-surface:#ffffff;--buyer-text:#28383a;--buyer-muted:#626b70;--buyer-border:#e5dcc5;--buyer-side:#332b20;--buyer-side-text:#eee9e1;--buyer-side-active:#50412b;--buyer-radius:10px;--buyer-shadow:0 3px 14px #17223808;--theme-pattern:url("/themes/golden-deco.svg")}
+.preview-golden-deco{--mini-bg:#fbf7ed;--mini-surface:#ffffff;--mini-side:#332b20;--mini-accent:#886520;--mini-border:#e5dcc5;--mini-radius:5px;--mini-pattern:url("/themes/golden-deco.svg")}
