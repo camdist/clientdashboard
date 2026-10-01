@@ -1,9 +1,7 @@
-# Apply the Themes update
+# Content Type update v3.4
 
-1. Extract this ZIP.
-2. In GitHub, open the folder that contains your package.json.
-3. Use Add file > Upload files. Upload the app, components, lib, scripts, worker and public folders from this ZIP so their paths match the existing project. The new theme-designs.css, theme-catalog.json and five SVG files must be included.
-4. Commit the changes on the branch connected to Cloudflare.
-5. Wait for deployment to succeed, then press Ctrl + F5 and open Themes.
+Extract this ZIP, then upload its folders/files to the root of your GitHub repository, camdist/clientdashboard. Keep every folder path, replace matching files, add new files, and commit. Let Cloudflare deploy the commit or trigger a new build. Refresh your dashboard afterward.
 
-The archive replaces changed application files only. It includes the previous stylesheet fix. It does not include your wrangler.jsonc, config/app.json, password, database migrations or dependency configuration. No migration or new dependency is required. Read THEMES-v3.3.md for theme choices and validation details.
+Read CONTENT-TYPE-v3.4.md for instructions. This update includes the earlier themes and stylesheet fix. It requires no new dependency, migration or account configuration. Your configured wrangler.jsonc, config/app.json and passwords are excluded.
+
+Content Type now combines the two trackers, with All and automatic buttons for formats entered and saved in content details.

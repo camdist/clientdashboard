@@ -24,3 +24,11 @@ Not performed:
 - Import of existing live records or uploaded files.
 
 The build emits the framework's large-client-chunk advisory; it completes successfully. Direct PDF generation is loaded on demand. Use CHECKLIST.md for deployment and browser smoke checks in your own account.
+
+## Version 3.3 theme update
+
+TypeScript/build passed. All ten themes saved and read back through the compiled Worker; five SVG patterns served with the correct content type and authentication. Compiled CSS/JavaScript routing remains correct. Ten desktop preset folders verified. Illustrative SVG design preview reviewed. Live deployment and interactive browser testing were not performed.
+
+## Version 3.4 Content Type update
+
+TypeScript and production Worker build passed. Format discovery and All/type filtering checked, including case and whitespace matching, custom names, edits, deletion and input length limits. Compiled Worker checks passed for grouped navigation, custom-format save/edit/read-back/delete, blank/oversized/control-character rejection, custom-format calendar import and case-insensitive duplicate skipping. CSS/JavaScript authentication and all ten themes passed regression checks. Interactive browser testing and live deployment were not performed.

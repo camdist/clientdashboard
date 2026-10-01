@@ -1,8 +1,12 @@
 # Client Dashboard — Personal Web Deployment
 
-Complete self-hosting package, version 3.2 · 1 October 2026
+Complete self-hosting package, version 3.4 · 1 October 2026
 
-This package contains the dashboard application, all five themes, server APIs, D1 database schema/migration, R2 upload handling, desktop installation support, and an independent personal password gate. Deploy it to your own Cloudflare Workers account. It does not rely on ChatGPT Sites or your previous private URL.
+This package contains the dashboard application, all ten themes, server APIs, D1 database schema/migration, R2 upload handling, desktop installation support, and an independent personal password gate. Deploy it to your own Cloudflare Workers account. It does not rely on ChatGPT Sites or your previous private URL.
+
+**Content Type update:** read CONTENT-TYPE-v3.4.md for the grouped tracker and custom format instructions.
+
+**Theme update:** read THEMES-v3.3.md for the five new illustrated themes and GitHub update instructions.
 
 **New features:** read FEATURES-v3.2.md for logo setup, invoice automation, monthly Excel imports and chart choices.
 
@@ -13,7 +17,7 @@ The package is for one owner/business workspace. Your browser will prompt for th
 ## Included
 
 - Business overview, client profiles, projects, tasks and payment records.
-- Connected content calendar, short/long-form trackers, workflow and performance analytics.
+- Connected content calendar, Content Type selector with All and custom formats, workflow and performance analytics.
 - Resources with protected file uploads/downloads.
 - Executive Navy, Minimal Slate, Modern Indigo, Classic Teal and Graphite Pro.
 - Business owner and client logo uploads, currency, owner defaults, module/widget controls and custom client fields.
