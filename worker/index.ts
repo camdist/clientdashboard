@@ -5,7 +5,7 @@ export default {async fetch(request:Request,env:Cloudflare.Env,ctx:ExecutionCont
  // run_worker_first protects static assets too. Serve them from the asset
  // binding after authentication instead of passing them to the app router.
  const pathname=new URL(request.url).pathname;
- const staticAsset=pathname.startsWith('/_next/static/')||pathname.startsWith('/icons/')||pathname.startsWith('/downloads/')||['/favicon.svg','/manifest.webmanifest','/sw.js'].includes(pathname);
+ const staticAsset=pathname.startsWith('/_next/static/')||pathname.startsWith('/icons/')||pathname.startsWith('/themes/')||pathname.startsWith('/downloads/')||['/favicon.svg','/manifest.webmanifest','/sw.js'].includes(pathname);
  const response=staticAsset&&['GET','HEAD'].includes(request.method)
   ? env.ASSETS?await env.ASSETS.fetch(request):new Response('Static asset binding is unavailable.',{status:503})
   : await handler.fetch(request,env,ctx);
