@@ -1,1 +1,10 @@
-
+import {database} from '@/db/raw';
+import {z} from 'zod';
+import {planRow,planKey} from '@/lib/calendar-plan';
+export async function POST(req:Request){try{
+ const input=z.object({client:z.string().min(1).max(100),month:z.string().regex(/^\d{4}-(0[1-9]|1[0-2])$/),rows:z.array(planRow).min(1).max(366)}).safeParse(await req.json());if(!input.success)return Response.json({error:input.error.issues[0]?.message||'Invalid plan.'},{status:400});
+ const {client,month,rows}=input.data,db=database();if(rows.some(r=>!r.date.startsWith(month)))return Response.json({error:'Every publishing date must be in the selected month.'},{status:400});if(!await db.prepare("SELECT id FROM records WHERE id=? AND kind='client'").bind(client).first())return Response.json({error:'Select an existing client.'},{status:400});
+ const prior=await db.prepare("SELECT payload FROM records WHERE kind='content' AND client=?").bind(client).all();const keys=new Set(prior.results.map((r:any)=>planKey(JSON.parse(r.payload)))),ids=new Set(prior.results.map((r:any)=>JSON.parse(r.payload).id)),records:any[]=[],statements:any[]=[];
+ for(const row of rows){const key=planKey(row);if(keys.has(key))continue;keys.add(key);const hash=Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(client+'\u001f'+key)))).map(b=>b.toString(16).padStart(2,'0')).join('');let id='plan-'+hash,index=0;while(ids.has(id))id='plan-'+hash+'-'+(++index);ids.add(id);const record={...row,id,kind:'content',client,projectId:'',resourceIds:[],views:0,likes:0,comments:0,shares:0,clicks:0,leads:0,conversions:0};records.push(record);statements.push(db.prepare('INSERT OR IGNORE INTO records (id,kind,client,payload) VALUES (?,?,?,?)').bind(record.id,'content',client,JSON.stringify(record)));}
+ const results=statements.length?await db.batch(statements):[];const inserted=records.filter((_,i)=>Number(results[i].meta.changes)>0);return Response.json({records:inserted,skipped:rows.length-inserted.length});
+ }catch(e){console.error(e);return Response.json({error:'The plan could not be imported. Please retry.'},{status:503})}}
