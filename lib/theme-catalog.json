@@ -1,0 +1,162 @@
+[
+  {
+    "id": "executive",
+    "name": "Executive Navy",
+    "style": "Corporate",
+    "reference": "CoreUI",
+    "url": "https://coreui.io/templates/admin-dashboard/bootstrap/",
+    "description": "Structured navy navigation, crisp tables, and clear financial summaries.",
+    "best": "Consultants, agencies, and professional services",
+    "colors": [
+      "#142238",
+      "#234c88",
+      "#f3f5f8"
+    ],
+    "pattern": "",
+    "dark": false
+  },
+  {
+    "id": "minimal",
+    "name": "Minimal Slate",
+    "style": "Minimal",
+    "reference": "shadcn/ui",
+    "url": "https://ui.shadcn.com/examples/dashboard",
+    "description": "White navigation, monochrome surfaces, and a quiet editorial hierarchy.",
+    "best": "Solo owners, freelancers, and lean teams",
+    "colors": [
+      "#ffffff",
+      "#334155",
+      "#f8fafc"
+    ],
+    "pattern": "",
+    "dark": false
+  },
+  {
+    "id": "material",
+    "name": "Modern Indigo",
+    "style": "Material",
+    "reference": "Material Dashboard",
+    "url": "https://www.creative-tim.com/product/material-dashboard",
+    "description": "Indigo accents, raised cards, and generous spacing for daily operations.",
+    "best": "Online brands, startups, and growing teams",
+    "colors": [
+      "#312e81",
+      "#5b4acb",
+      "#eef2ff"
+    ],
+    "pattern": "",
+    "dark": false
+  },
+  {
+    "id": "classic",
+    "name": "Classic Teal",
+    "style": "Operational",
+    "reference": "AdminLTE",
+    "url": "https://adminlte.io/",
+    "description": "Teal navigation, compact cards, and practical tables with strong dividers.",
+    "best": "Local services, shops, and operational teams",
+    "colors": [
+      "#153d42",
+      "#167681",
+      "#f2f7f7"
+    ],
+    "pattern": "",
+    "dark": false
+  },
+  {
+    "id": "graphite",
+    "name": "Graphite Pro",
+    "style": "Dark",
+    "reference": "Tabler",
+    "url": "https://tabler.io/admin-template",
+    "description": "Dark graphite surfaces, bright blue emphasis, and reduced screen glare.",
+    "best": "Digital studios and owners who prefer a dark workspace",
+    "colors": [
+      "#111827",
+      "#83b7ff",
+      "#182334"
+    ],
+    "pattern": "",
+    "dark": true
+  },
+  {
+    "id": "botanical",
+    "name": "Botanical Sage",
+    "style": "Floral",
+    "description": "Fine leaf illustrations on warm ivory, with sage accents and rounded cards.",
+    "best": "Wellness services, coaches and sustainable brands",
+    "colors": [
+      "#213f34",
+      "#3d7059",
+      "#f5f7ee"
+    ],
+    "pattern": "botanical",
+    "dark": false,
+    "reference": "Original design",
+    "url": ""
+  },
+  {
+    "id": "rose",
+    "name": "Rose Garden",
+    "style": "Floral",
+    "description": "Soft rose linework, cream surfaces and burgundy navigation.",
+    "best": "Beauty businesses, boutiques and creative services",
+    "colors": [
+      "#4c2639",
+      "#95465f",
+      "#fcf5f3"
+    ],
+    "pattern": "rose",
+    "dark": false,
+    "reference": "Original design",
+    "url": ""
+  },
+  {
+    "id": "coastal",
+    "name": "Coastal Geometry",
+    "style": "Graphic",
+    "description": "Abstract arcs and waves in ocean blue and sand, with crisp content panels.",
+    "best": "Travel planners, lifestyle brands and digital studios",
+    "colors": [
+      "#173e54",
+      "#226c88",
+      "#f1f7fa"
+    ],
+    "pattern": "coastal",
+    "dark": false,
+    "reference": "Original design",
+    "url": ""
+  },
+  {
+    "id": "midnight-bloom",
+    "name": "Midnight Bloom",
+    "style": "Dark floral",
+    "description": "Botanical outlines on deep plum, with luminous lavender accents.",
+    "best": "Creative agencies and owners who prefer a decorative dark workspace",
+    "colors": [
+      "#211c31",
+      "#d0b8f1",
+      "#161323"
+    ],
+    "pattern": "midnight-bloom",
+    "dark": true,
+    "reference": "Original design",
+    "url": ""
+  },
+  {
+    "id": "golden-deco",
+    "name": "Golden Art Deco",
+    "style": "Graphic",
+    "description": "Geometric fan linework, warm cream cards and gold-toned accents.",
+    "best": "Consultants, premium services and event businesses",
+    "colors": [
+      "#332b20",
+      "#886520",
+      "#fbf7ed"
+    ],
+    "pattern": "golden-deco",
+    "dark": false,
+    "reference": "Original design",
+    "url": ""
+  }
+]

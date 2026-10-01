@@ -1,12 +1,7 @@
 import {z} from 'zod';
-export const businessViews=['Business overview','Clients','Projects','Tasks','Payments','Customize','Buyer themes','Owner guide'];
-export const themes=[
-{id:'executive',name:'Executive Navy',style:'Corporate',reference:'CoreUI',url:'https://coreui.io/templates/admin-dashboard/bootstrap/',description:'Structured navy navigation, crisp tables, and clear financial summaries.',best:'Consultants, agencies, and professional services',colors:['#142238','#234c88','#f3f5f8']},
-{id:'minimal',name:'Minimal Slate',style:'Minimal',reference:'shadcn/ui',url:'https://ui.shadcn.com/examples/dashboard',description:'White navigation, monochrome surfaces, and a quiet editorial hierarchy.',best:'Solo owners, freelancers, and lean teams',colors:['#ffffff','#334155','#f8fafc']},
-{id:'material',name:'Modern Indigo',style:'Material',reference:'Material Dashboard',url:'https://www.creative-tim.com/product/material-dashboard',description:'Indigo accents, raised cards, and generous spacing for daily operations.',best:'Online brands, startups, and growing teams',colors:['#312e81','#5b4acb','#eef2ff']},
-{id:'classic',name:'Classic Teal',style:'Operational',reference:'AdminLTE',url:'https://adminlte.io/',description:'Teal navigation, compact cards, and practical tables with strong dividers.',best:'Local services, shops, and operational teams',colors:['#153d42','#167681','#f2f7f7']},
-{id:'graphite',name:'Graphite Pro',style:'Dark',reference:'Tabler',url:'https://tabler.io/admin-template',description:'Dark graphite surfaces, bright blue emphasis, and reduced screen glare.',best:'Digital studios and owners who prefer a dark workspace',colors:['#111827','#83b7ff','#182334']}
-];
+export const businessViews=['Business overview','Clients','Projects','Tasks','Payments','Customize','Themes','Owner guide'];
+export {default as themes} from './theme-catalog.json';
+import themes from './theme-catalog.json';
 export const clientStages=['Lead','Contacted','Proposal sent','Active','On hold','Closed'];
 export const projectStages=['Planning','In progress','Waiting for client','Completed','Cancelled'];
 export const taskStages=['To do','In progress','Done'];
