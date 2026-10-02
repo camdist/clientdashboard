@@ -8,6 +8,13 @@
       "when": 1790815718097,
       "tag": "0000_equal_prima",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1790815718098,
+      "tag": "0001_repair_client_references",
+      "breakpoints": true
     }
   ]
 }
