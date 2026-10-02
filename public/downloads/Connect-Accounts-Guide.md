@@ -1,8 +1,18 @@
 # Connect Accounts & Get the Right Post Metrics
 
-Client Dashboard v3.5
+Client Dashboard v3.6
 
 Start in Accounts & pages. Select the correct client, add the account or Page, and follow its guide. API authorization is a one-time site-owner/developer task. This release uses Cloudflare secrets; it does not include one-click OAuth login, automatic token renewal or scheduled syncing.
+
+## Easier option: import a post-level report
+
+1. Add the account under the correct client; no token needed for CSV imports.
+2. Choose that account in each content record, paste the exact published post link, mark Published and save.
+3. Download a post-level CSV from your platform or reporting service. Profile totals cannot be assigned to individual posts.
+4. In Analytics choose Import analytics CSV. Select account/file, map post links or IDs and full numeric counts, and choose lifetime counters or reporting dates.
+5. Check the preview, then import matched rows. Unmatched rows do not create posts. Up to 500 matched posts per import; blank counts stay unavailable. Import replaces the last snapshot.
+
+Not every platform/account offers suitable CSV exports. The optional API setup below still requires permissions and maintained tokens.
 
 ## How to match the right post
 
