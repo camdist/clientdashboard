@@ -80,7 +80,7 @@ Add a custom domain through your Worker's Cloudflare settings. Re-run the config
 
 ## Updates and personal backups
 
-Back up records before updating. Reuse the same D1 database ID and R2 bucket name. Do not delete those resources when replacing app code. Export records using Customize → Export all records; download uploaded files separately in Resources. A record JSON export does not include R2 file bytes and there is no general restore UI in this version.
+Back up records before updating. Reuse the same D1 database ID and R2 bucket name. Do not delete those resources when replacing app code. On v3.6, download a full ZIP from Backup & restore, including uploaded files. Restore adds missing records and keeps existing work. Old records-only JSON exports are not accepted as full backups. Before updating v3.5, export records and download files separately. Read RELEASE-v3.6.md and apply its new repair migration.
 
 For another owner/business, deploy a separate Worker with its own database, bucket and password. Do not distribute one shared password/database to paying customers.
 

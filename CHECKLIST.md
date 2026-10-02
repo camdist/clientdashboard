@@ -32,3 +32,14 @@ This is a personal single-workspace deployment. Account-separated multi-buyer Sa
 - Check an incorrect account and an expired key: syncing should show a clear error and keep prior values.
 - Confirm missing counters show Not available, and impressions are separate from views.
 - Test a custom platform: registration and links work; automatic syncing is clearly unavailable.
+
+## Version 3.6 release checks
+
+- [ ] Read RELEASE-v3.6.md; keep working config/secrets and apply 0001_repair_client_references.sql to the existing D1 database.
+- [ ] Verify reassigned projects, tasks and invoices; linked records belong to the same client.
+- [ ] Preview an actual post-level CSV, check post/account matching and metrics, then import.
+- [ ] Compare lifetime and reporting-period bases separately; publication month is clearly understood.
+- [ ] Change timezone and check today's date/calendar highlight.
+- [ ] Delete/restore a linked post and file; verify newer task edits are preserved.
+- [ ] Download a full ZIP and restore into an isolated deployment; compare downloaded file bytes.
+- [ ] Finish desktop/phone/keyboard checks and buyer policies before listing.

@@ -1,8 +1,10 @@
 # Client Dashboard — Personal Web Deployment
 
-Complete self-hosting package, version 3.5 · 1 October 2026
+Complete self-hosting package, version 3.6 · 1 October 2026
 
 This package contains the dashboard application, all ten themes, server APIs, D1 database schema/migration, R2 upload handling, desktop installation support, and an independent personal password gate. Deploy it to your own Cloudflare Workers account. It does not rely on ChatGPT Sites or your previous private URL.
+
+**Recovery and analytics update:** read RELEASE-v3.6.md before updating. Apply the new repair migration, then test Backup & restore. Buyers can start with BUYER-START-HERE.md. Seller policy decisions are listed in SELLER-POLICY-DRAFTS.md.
 
 **Accounts update:** read ACCOUNTS-v3.5.md and the simple Connect Accounts guide in public/downloads. Register any platform and link each published post to its account. API adapters require one-time platform setup.
 
@@ -21,7 +23,9 @@ The package is for one owner/business workspace. Your browser will prompt for th
 - Business overview, client profiles, projects, tasks and payment records.
 - Connected content calendar, Content Type selector with All and custom formats, workflow and performance analytics.
 - Accounts & pages for any platform, per-client post links, on-demand API counters for six supported platforms, and simple setup guides.
-- Resources with protected file uploads/downloads.
+- Resources with protected file uploads/downloads, reversible Trash and checksum-verified full backup/restore.
+- Reviewed post-level CSV analytics imports without API keys; distinct lifetime/period reporting bases.
+- Custom workspace timezone.
 - Executive Navy, Minimal Slate, Modern Indigo, Classic Teal and Graphite Pro.
 - Business owner and client logo uploads, currency, owner defaults, module/widget controls and custom client fields.
 - Automatic invoice numbers, editable line items, discounts, user-specified tax rates, payment terms, project-budget prefilling and PDF downloads.
@@ -33,7 +37,7 @@ The package is for one owner/business workspace. Your browser will prompt for th
 
 ## Data
 
-The package contains source and sample demonstration content. It does not contain records or uploaded files from the live private dashboard, credentials, node_modules, or account identifiers. Your new database is created independently. The demonstration client seeds once on first load. To retain live records, use Customize → Export all records on the current dashboard and download required files from Resources separately. The exported JSON is a record copy; a general restore/import interface is not currently built.
+The package contains source and sample demonstration content. It does not contain records or uploaded files from the live private dashboard, credentials, node_modules, or account identifiers. Your new database is created independently. The demonstration client seeds once on first load. In v3.6, use Backup & restore → Download full backup for a ZIP of current records and uploaded files. Restore adds missing records without overwriting current work. See RELEASE-v3.6.md for limits, secrets excluded and larger-workspace recovery. Old Customize JSON exports are records-only copies and are not accepted as full backups.
 
 Invoice numbers, totals and balances are calculated automatically. Payments received, leads and conversions are entered manually. Supported social counters can be fetched on demand after platform authorization and Cloudflare secret setup. Changing reporting currency does not convert stored monetary values. Desktop access requires internet.
 

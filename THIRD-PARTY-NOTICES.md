@@ -11,6 +11,6 @@ The application uses the dependency versions listed in package.json/pnpm-lock.ya
 - Recharts, Sonner, Zod and Tailwind CSS: MIT. Lucide React: ISC.
 - Vendored shadcn Tailwind CSS: the supplied vendor/shadcn-tailwind-4.13.0.LICENSE.md is retained.
 
-The five dashboard themes are original styles inspired by design references, not copies of paid template products. No paid-template license or third-party subscription is included.
+The original five dashboard themes are inspired by design references. The five added floral/graphic themes use original SVG artwork. These are not copies of paid template products. No paid-template license or third-party subscription is included.
 
 - Vendored pdf-lib 1.17.1: MIT. The self-contained browser build and LICENSE.md are in vendor/pdf-lib/. PDF generation runs in the browser.
