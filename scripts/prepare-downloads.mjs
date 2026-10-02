@@ -11,3 +11,6 @@ zip([['START-HERE.txt',note],...themes.flatMap(([id,name])=>[...shortcuts(name.r
 
 // Retain the previous download URL for existing desktop bookmarks.
 fs.copyFileSync('public/downloads/Client-Dashboard-Themes.zip','public/downloads/Client-Dashboard-Buyer-Themes.zip');
+
+// Buyer-facing help follows the release source, so deployed downloads stay current.
+for(const name of ['BUYER-START-HERE.md','RELEASE-v3.6.md'])fs.copyFileSync(name,'public/downloads/'+name);
