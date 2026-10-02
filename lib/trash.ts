@@ -1,0 +1,1 @@
+export function trashStatement(db:D1Database,record:any,related:any[]=[]){const trash={id:'trash-'+crypto.randomUUID(),kind:'trash',client:record.client,record,related,deletedAt:new Date().toISOString()};return db.prepare('INSERT INTO records (id,kind,client,payload) VALUES (?,?,?,?)').bind(trash.id,'trash',record.client,JSON.stringify(trash))}

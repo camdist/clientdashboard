@@ -20,7 +20,13 @@ export function extractPostId(platform:string,value:string){
  return '';
 }
 export function metricValue(record:any,key:string):number|null{
- if(record.metricsSource==='api'&&!['leads','conversions'].includes(key))return typeof record.syncedMetrics?.[key]==='number'?record.syncedMetrics[key]:null;
+ if(['api','import'].includes(record.metricsSource)&&!['leads','conversions'].includes(key))return typeof record.syncedMetrics?.[key]==='number'?record.syncedMetrics[key]:null;
  if(!['views','likes','comments','shares','clicks','leads','conversions'].includes(key)&&record[key]===undefined)return null;
  return Number(record[key]||0);
+}
+
+export function reportBasis(record:any):string {
+ const period=String(record.metricsPeriod||'');const dates=period.match(/(\d{4}-\d{2}-\d{2}) to (\d{4}-\d{2}-\d{2})/);
+ if(['api','import'].includes(record.metricsSource)){if(dates)return 'Period '+dates[1]+' to '+dates[2];return record.metricsSyncedAt?'Lifetime counters':'Not synced yet'}
+ return 'Manual figures (period unspecified)';
 }
