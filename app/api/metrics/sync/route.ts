@@ -12,6 +12,7 @@ export async function POST(req:Request){try{
  if(post.metricsSyncedAt&&Date.now()-Date.parse(post.metricsSyncedAt)<60000)return Response.json({error:'These metrics were just updated. Wait one minute before syncing again.'},{status:429});
  const token=(env as unknown as Record<string,string|undefined>)[secretName(account.id)];if(!token)return Response.json({error:'Finish this account’s connection guide: add its access token or API key as a Cloudflare secret.'},{status:409});
  const result=await fetchPostMetrics(account,post.postRef,token),record={...post,metricsSource:'api',syncedMetrics:result.metrics,metricsPostId:result.postId,metricsPeriod:result.period,metricsSyncedAt:new Date().toISOString()};
+ delete (record as any).metricsImportFile;
  const write=await db.prepare('UPDATE records SET payload=? WHERE id=? AND payload=?').bind(JSON.stringify(record),post.id,row.payload).run();if(!write.meta.changes)return Response.json({error:'The content changed while syncing. Reload it and try again.'},{status:409});
  return Response.json({record});
  }catch(e){return Response.json({error:e instanceof SyncError?e.message:'Metrics could not be updated. Previous data is preserved; try again.'},{status:e instanceof SyncError?400:503})}}
