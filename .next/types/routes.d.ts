@@ -22,15 +22,21 @@ declare global {
 declare namespace VinextRouteTypes {
   type PageRoute = "/";
   type LayoutRoute = "/";
-  type RouteHandlerRoute = "/api/business" | "/api/calendar/import" | "/api/files" | "/api/records";
-  type AppRoute = "/" | "/api/business" | "/api/calendar/import" | "/api/files" | "/api/records";
+  type RouteHandlerRoute = "/api/business" | "/api/calendar/import" | "/api/files" | "/api/metrics/import" | "/api/metrics/sync" | "/api/records" | "/api/recovery" | "/api/recovery/files" | "/api/social-accounts" | "/api/trash";
+  type AppRoute = "/" | "/api/business" | "/api/calendar/import" | "/api/files" | "/api/metrics/import" | "/api/metrics/sync" | "/api/records" | "/api/recovery" | "/api/recovery/files" | "/api/social-accounts" | "/api/trash";
 
   interface ParamMap {
     "/": {};
     "/api/business": {};
     "/api/calendar/import": {};
     "/api/files": {};
+    "/api/metrics/import": {};
+    "/api/metrics/sync": {};
     "/api/records": {};
+    "/api/recovery": {};
+    "/api/recovery/files": {};
+    "/api/social-accounts": {};
+    "/api/trash": {};
   }
 
   interface LayoutSlotMap {
